@@ -20,8 +20,8 @@ spec:
 
     # 파드에 세팅되는 컨테이너 설정
     spec:
-      imagePullSecrets:
-        - name: ecr-secret
+      imagePullSecrets: # 우리의 image 저장소가 private 하기 때문에 계정 정보를 secret 오브젝트로 세팅.
+        - name: ecr-secret # 우리가 직접 만든 secret 오브젝트. 여기에 ecr 접근 권한 계정 정보 들어있음.
       containers:
         - name: config-service
           image: {{ .Values.image }}
