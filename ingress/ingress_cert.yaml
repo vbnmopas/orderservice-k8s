@@ -44,6 +44,6 @@ spec:
   issuerRef:
     name: letsencrypt-prod # 인증서 발급 시 위에 선언한 ClusterIssuer를 사용하겠다.
     kind: ClusterIssuer
-  commonName: api.playdatashop8917.store # 인증서를 발급받을 도메인 이름
+  commonName: api-v1.playdatashop8917.store # 인증서를 발급받을 도메인 이름
   dnsNames:
     - api.playdatashop8917.store # 인증서 발급받을 도메인 많으면 기타 서브 도메인 추가 가능.

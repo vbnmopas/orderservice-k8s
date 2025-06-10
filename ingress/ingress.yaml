@@ -18,10 +18,10 @@ spec:
   # api-playdatashop-tls라는 secret 오브젝트에 발급받은 인증서를 저장 -> HTTPS 연결 처리
   tls:
     - hosts:
-        - api.playdataorder.store
+        - api-v1.playdataorder.store
       secretName: api-playdatashop-tls
   rules:
-    - host: api.playdataorder.store
+    - host: api-v1.playdataorder.store
       http:
         paths:
           - path: /
